@@ -14,6 +14,19 @@
  */
 
 /**
+ * Takes the given DOM element `target` and replaces combinations of ? and !
+ * with an interrobang (‽).
+ *
+ * @todo Refactor this to operate on a string, returning the results. Then make
+ *       an additional function that performs the replacement on a given object
+ *       and property. It could be taken a step further by creating a helper
+ *       function that acts as a shortcut for doing the same thing but on
+ *       DOM elements specifically. This shortcut could simply accept a
+ *       selector, and would then iterate over each matched element and
+ *       run it through the object replacer function by passing in the
+ *       DOM element as the object, and innerHTML as the property to
+ *       modify.
+ *
  * @param DOMElement target The DOM element on which to perform the ~~seek and
  *                          destroy~~ find and replace.
  */
@@ -50,4 +63,6 @@ function punctuationEmbetterment(target) {
 }
 
 // Example usage interrobanging the body.
+//
+// @todo Move the example to README.md so this file is pure implementation.
 punctuationEmbetterment( document.querySelector("body") );
