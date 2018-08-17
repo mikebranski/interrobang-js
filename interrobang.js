@@ -61,8 +61,3 @@ function punctuationEmbetterment(target) {
   // Update the target's inner HTML with the new content string.
   target.innerHTML = content;
 }
-
-// Example usage interrobanging the body.
-//
-// @todo Move the example to README.md so this file is pure implementation.
-punctuationEmbetterment( document.querySelector("body") );
